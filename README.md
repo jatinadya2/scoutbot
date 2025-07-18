@@ -1,6 +1,6 @@
 # scoutbot
 
-## Getting scouting reports from Sports Info Solutions
-Links in report_links.txt
+## Got the data from "Trouble with the Curve"
 
-###  Downloaded JSON of scraped data from KADOA
+https://github.com/jacobdanovitch/Trouble-With-The-Curve
+
