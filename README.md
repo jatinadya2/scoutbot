@@ -29,11 +29,14 @@ Front-end built with **Streamlit**, back-end powered by **OpenAI GPT-4o** + **Pi
 
 ```mermaid
 flowchart LR
+    %% ── Client ─────────────────
     subgraph Client
-        A[Browser] -->|WebSocket| D(Streamlit&nbsp;Server)
+        A[Browser] -->|WebSocket| D[Streamlit&nbsp;Server]
     end
+
+    %% ── Server ─────────────────
     subgraph Server
-        D -->|ask(question)| F[Backend.py]
-        F -->|embed + query| P[Pinecone&nbsp;Vector&nbsp;DB]
-        F -->|Chat&nbsp;Completion| O(OpenAI&nbsp;GPT-4o)
+        D -->|"ask()"| F[backend.py]
+        F -->|"embed & query"| P[Pinecone&nbsp;Vector&nbsp;DB]
+        F -->|"chat completion"| O[OpenAI&nbsp;GPT-4o]
     end
